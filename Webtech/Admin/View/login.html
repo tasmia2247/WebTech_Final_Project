@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title> Login Page</title>
+</head>
+<body>
+        <form>
+            Username: <input type="text" id="username" name="username" value="" /> <br>
+            Password: <input type="password" id="password" name="password" value="" /> <br><br>
+                       <input type="submit" value="Submit" onclick = LoginValidation(event) />
+        </form>
+
+        <script>
+            
+            function LoginValidation(event){
+                event.preventDefault();
+                
+                let username = document.getElementById('username').value;
+                let password = document.getElementById('password').value; 
+              
+               if(username === ''){
+                alert("Please fillup username field");
+               }
+               else if(password === ''){
+                alert("Please fillup password field");
+               }
+               else{
+                let xhttp = new XMLHttpRequest();
+                let json = {'username' : username, 'password' : password};
+                let user = JSON.stringify(json);
+                if(user == null){
+                    alert ("Failed to INCODE json");
+                }
+                xhttp.open('POST', '../Controller/AdminLoginCheck.php', true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send('mydata=' + user);
+                xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert(this.responseText);
+                     } 
+                if(this.responseText === "LOGIN SUCCESFUL"){
+                    window.location.href = "../view/AdminHomePage.php";
+                }
+            }
+            }
+        }
+        </script>
+        
+</body>
+</html>

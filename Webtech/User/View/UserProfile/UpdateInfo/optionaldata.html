@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body and HTML fill the full height */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        table {
+            border: 1px solid black; /* Optional: adds a border to the table */
+            padding: 10px; /* Optional: adds some padding inside the table */
+        }
+    </style>
+</head>
+<body>
+
+    <form id="updateForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>Live In</td>
+                <td><input type="text" name="livein" id="livein"></td>
+            </tr>
+            <tr>
+                <td>University</td>
+                <td><input type="text" name="university" id="university"></td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td><input type="text" name="college" id="college"></td>
+            </tr>
+            <tr>
+                <td>Home Town</td>
+                <td><input type="text" name="hometown" id="hometown"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Update</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="../../../assets/UserProfile/UpdateInfo/optionaldata.js">
+        
+      
+    </script>
+
+</body>
+</html>

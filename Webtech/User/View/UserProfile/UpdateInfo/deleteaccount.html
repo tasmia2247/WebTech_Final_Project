@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body and HTML fill the full height */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        table {
+            border: 1px solid black; /* Optional: adds a border to the table */
+            padding: 10px; /* Optional: adds some padding inside the table */
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td colspan="2">Are you sure you want to delete your account?</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" >Delete Account</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="../../../assets/UserProfile/UpdateInfo/deleteaccount.js">
+       
+    </script>
+</body>
+</html>

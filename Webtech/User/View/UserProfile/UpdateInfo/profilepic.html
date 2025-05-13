@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            html, body {
+                background-color: limegreen;
+                height: 100%; 
+                margin: 0; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+            }
+    
+            form {
+                
+                display: inline-block; 
+                padding: 20px; 
+                border: 1px solid black; 
+                background-color: #f9f9f9; 
+            }
+
+            table {
+                
+                border-collapse: collapse; 
+            }
+
+            td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+<body>
+
+    <form action="../../../Controller/UserProfile/UpdateInfo/profilepic.php" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="image">Upload Image:</label></td>
+                <td><input type="file" name="image" id="image" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" name="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
