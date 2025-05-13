@@ -16,13 +16,6 @@
   <br>
   <br>
 
-  <table border="1">
-    <tr>
-      <th>NOT ATTACHED FILE Contribution:</th>
-    </tr>
-    <tr>
-      <td>MD. MERAZ AHASAN SHAH</td>
-    </tr>
-  </table>
+
 </body>
 </html>
